@@ -1,10 +1,7 @@
-%h1
-  Welcome to StockSquare
-%script{:src => "/assets/application.js"}
-
-Stock <SPAN></SPAN>ymbol:
+Stock Symbol:
 %input{:name => "fname", :placeholder => "AAPL", :type => "text"}
   %br
     %button{:onclick => "renderChart()", :type => "button"} Look Up
     %button{:onclick => "clearChart()", :type => "button"} Clear
     #chartDiv
+.page_content
