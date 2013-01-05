@@ -1,0 +1,11 @@
+#overview
+  %h2 Hypothesis
+  %button{:onclick => "renderContentPage()", :type => "button"} Start  
+
+#content
+  Stock Symbol:
+  %input{:name => "fname", :placeholder => "AAPL", :type => "text"}
+    %br
+      %button{:onclick => "renderChart()", :type => "button"} Look Up
+      %button{:onclick => "clearChart()", :type => "button"} Clear
+      #chartDiv
