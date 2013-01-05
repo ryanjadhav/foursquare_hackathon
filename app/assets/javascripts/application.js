@@ -15,12 +15,10 @@ function renderContentPage() {
 
 function renderChart() {
 	clearChart();
-	this.img = document.createElement("img");
-	this.img.src = "/assets/apple.png";
-	document.getElementById("chartDiv").appendChild(this.img);
+	$('#chartDiv').html("<img src=\"/assets/apple.png\">");
 }
 
 function clearChart() {
-	document.getElementById("chartDiv").innerHTML = '';
+	$('#chartDiv').html('');
 }
 
