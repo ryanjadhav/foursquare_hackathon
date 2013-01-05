@@ -19,6 +19,7 @@ end
 # in production environments by default.
 group :assets do
   gem 'sass-rails', "  ~> 3.1.0"
+  gem "haml", " ~> 3.1.7"
   gem 'coffee-rails', "~> 3.1.0"
   gem 'uglifier'
 end
