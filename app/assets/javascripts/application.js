@@ -8,6 +8,11 @@
 //= require jquery_ujs
 //= require_tree .
 
+function renderContentPage() {
+	$('#overview').hide();
+	$('#content').show();
+}
+
 function renderChart() {
 	clearChart();
 	this.img = document.createElement("img");

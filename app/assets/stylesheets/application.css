@@ -6,7 +6,15 @@
  *= require_tree . 
 */
 
-body {
+h1 {
 	color: orange;
+	text-align: left;
+}
+
+body {
 	text-align: center;
+}
+
+#content {
+	display: none;
 }
