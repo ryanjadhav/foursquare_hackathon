@@ -7,3 +7,15 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+function renderChart() {
+	clearChart();
+	this.img = document.createElement("img");
+	this.img.src = "/assets/apple.png";
+	document.getElementById("chartDiv").appendChild(this.img);
+}
+
+function clearChart() {
+	document.getElementById("chartDiv").innerHTML = '';
+}
+

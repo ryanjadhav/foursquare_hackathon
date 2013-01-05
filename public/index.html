@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang='en'>
+  <script type="text/javascript" src="/assets/application.js" ></script>
   <head>
     <title> StockSquare </title>
     <link rel="stylesheet" href="/assets/application.css" type="text/css" media="screen, projection" />
   </head>
   <body>
     <h1>Welcome to StockSquare</h1>
-    <form action="demo_form.asp">
-      Stock symbol: <input type="text" name="fname"><br>
-      <input type="submit" value="Look Up">
-    </form>
-
     <script src="/assets/application.js"></script>
+      Stock symbol: <input type="text" name="fname" placeholder="AAPL"><br>
+      <button type="button" onclick="renderChart()">Look Up</button>
+      <button type="button" onclick="clearChart()">Clear</button>
+    <div id="chartDiv"></div>
   </body>
 
 </html>
