@@ -11,13 +11,10 @@
     .header
       %h1
         StockSquare
+      .powered
+        Powered by 
+        %img.fsqimg{:src => "assets/foursquare-logo.png"}
+        and
+        %img.yimg{:src => "assets/yahoo.png"}
     .contentContainer
       = yield
-
-  %footer
-  Powered by
-  %img.footerimg{:src => "assets/fslogo.png"}
-  and 
-  %img.footerimg{:src => "assets/yahoologo.png"}
-  
- 
