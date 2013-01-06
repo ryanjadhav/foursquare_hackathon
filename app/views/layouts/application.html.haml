@@ -5,8 +5,11 @@
     = stylesheet_link_tag    "application"
     = javascript_include_tag "application"
     = csrf_meta_tags
+    %link{:href => "http://fonts.googleapis.com/css?family=Montserrat:400,700", :rel => "stylesheet", :type => "text/css"}
+    %script{:src => "http://d3js.org/d3.v3.js"}
   %body
-    #banner
-      %h1 StockSquare
-    #contentContainer
-      = yield
+    .header
+      %h1
+        StockSquare
+
+    = yield

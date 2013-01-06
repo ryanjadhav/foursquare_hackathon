@@ -1,11 +1,16 @@
 #overview
   %h2 Hypothesis
-  %button{:onclick => "renderContentPage()", :type => "button"} Start  
+  %p The number of a store's foursquare checkins is vaguely correlated to its stock price, maybe.
+  %br
+  %p Find out for yourself. 
+  %br
+  %button.but.startButton{:onclick => "renderContentPage()", :type => "button"} Start  
 
 #content
   Stock Symbol:
   %input{:name => "fname", :placeholder => "AAPL", :type => "text"}
     %br
-      %button{:onclick => "renderChart()", :type => "button"} Look Up
-      %button{:onclick => "clearChart()", :type => "button"} Clear
+    %br
+      %button.but{:onclick => "renderChart()", :type => "button"} Look Up
+      %button.but{:onclick => "clearChart()", :type => "button"} Start Over
       #chartDiv
