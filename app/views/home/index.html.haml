@@ -7,8 +7,9 @@
   %button.but.startButton{:onclick => "renderContentPage()", :type => "button"} Start
 
 #content
+  %h2
   Stock Symbol:
-  %input{:name => "fname", :placeholder => "AAPL", :type => "text"}
+  %input.ifield{:name => "fname", :placeholder => "AAPL", :type => "text"}
     %br
     %br
       %button.but{:onclick => "renderChart()", :type => "button"} Look Up
