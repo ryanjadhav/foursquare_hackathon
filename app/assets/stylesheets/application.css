@@ -19,10 +19,30 @@ h1 {
   font-size: 16px;
 }
 
+
+
 .header {
   padding: 5px 10px;
   background-color: black;
 }
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
 
 p {
 	width: 400px;
