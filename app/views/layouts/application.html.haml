@@ -11,5 +11,13 @@
     .header
       %h1
         StockSquare
+    .contentContainer
+      = yield
 
-    = yield
+  %footer
+  Powered by
+  %img.footerimg{:src => "assets/fslogo.png"}
+  and 
+  %img.footerimg{:src => "assets/yahoologo.png"}
+  
+ 
