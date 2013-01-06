@@ -17,6 +17,11 @@ h1 {
 	text-align: left;
 }
 
+p {
+	width: 400px;
+	margin: 0 auto;
+}
+
 #content {
 	display: none;
 }
