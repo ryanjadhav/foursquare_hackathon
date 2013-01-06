@@ -108,7 +108,7 @@ d3.tsv("data.tsv", function(error, data) {
   checkins.values.forEach(function(c) {
     for (var i = 0; i < c.temperature; i++) {
       svg.append("image")
-          .attr("xlink:href", "https://ss0.4sqi.net/img/blank_boy-82b50670208ac7994bba547c50a6ad80.png")
+          .attr("xlink:href", "/assets/4sq.png")
           .attr("width", 32)
           .attr("height", 32)
           .attr("y", checkinY(i) - 40)
