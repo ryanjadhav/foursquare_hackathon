@@ -33,7 +33,7 @@ function drawChart() {
 var parseDate = d3.time.format("%Y%m%d%H").parse;
 
 var x = d3.time.scale()
-    .range([0, width]);
+    .range([40, width-40]);
 
 var y = d3.scale.linear()
     .range([height, 0]);
@@ -62,11 +62,12 @@ var svg = d3.select("#chartDiv").append("svg")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-d3.tsv("data.tsv", function(error, data) {
-  color.domain(d3.keys(data[0]).filter(function(key) { return key !== "date"; }));
+d3.tsv("output_checkindelta.tsv", function(error, data) {
+//d3.tsv("data.tsv", function(error, data) {
+  color.domain(d3.keys(data[0]).filter(function(key) { return key !== "Dates"; }));
 
   data.forEach(function(d) {
-    d.date = parseDate(d.date);
+    d.date = parseDate(d.Dates);
   });
 
   var stocksquareData = color.domain().map(function(name) {
@@ -80,6 +81,8 @@ d3.tsv("data.tsv", function(error, data) {
 
   var checkins = stocksquareData[0];
   var stockPrice = stocksquareData[1];
+debugger;
+  xAxis.ticks(d3.time.hours, d3.min([10, checkins.values.length]));
 
   x.domain(d3.extent(data, function(d) { return d.date; }));
 
@@ -88,7 +91,7 @@ d3.tsv("data.tsv", function(error, data) {
     d3.max(stockPrice.values, function(v) { return v.temperature; })
   ]);
 
-  checkinY.domain([0, 10]);
+  checkinY.domain([0, d3.max(checkins.values, function(v) { return v.temperature; })]);
 
   svg.append("g")
       .attr("class", "x axis")
@@ -108,7 +111,7 @@ d3.tsv("data.tsv", function(error, data) {
   checkins.values.forEach(function(c) {
     for (var i = 0; i < c.temperature; i++) {
       svg.append("image")
-          .attr("xlink:href", "/assets/4sq.png")
+          .attr("xlink:href", "/assets/personicon.png")
           .attr("width", 32)
           .attr("height", 32)
           .attr("y", checkinY(i) - 40)
